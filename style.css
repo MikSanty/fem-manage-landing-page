@@ -267,16 +267,32 @@ body {
 
 .primary-header {
   margin-top: var(--size-700);
-  display: fle;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .mobile-nav-toggle {
-  cursor: pointer;
-  background: none;
-  border: 0;
-  padding: 0.5em;
+  display: none;
 }
 
-.mobile-nav-toggle .icon-close {
-  display: none;
+@media (max-width: 50em) {
+  .primary-navigation {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    cursor: pointer;
+    background: none;
+    border: 0;
+    padding: 0.5em;
+  }
+
+  .mobile-nav-toggle .icon-close {
+    display: none;
+  }
 }
