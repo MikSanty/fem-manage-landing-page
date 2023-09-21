@@ -279,14 +279,34 @@ body {
   display: none;
 }
 
+.nav-list {
+  font-size: var(--fs-nav);
+}
+
 @media (max-width: 50em) {
   .primary-navigation {
     display: none;
+
+    position: fixed;
+    inset: 7rem var(--size-400) auto;
+    background: var(--clr-neutral-900);
+    border-radius: var(--size-100);
+  }
+
+  .nav-list {
+    display: grid;
+    gap: var(--size-600);
+    text-align: center;
+    font-weight: var(--fw-bold);
+  }
+
+  .nav-list a {
+    text-decoration: none;
+    color: white;
   }
 
   .primary-navigation[data-visible] {
     display: block;
-    position: fixed;
   }
 
   .mobile-nav-toggle {
