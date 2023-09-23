@@ -249,6 +249,21 @@ p[data-width="wide"] {
   }
 }
 
+/* cta */
+
+.cta {
+  background-image: url(/images/bg-simplify-section-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+@media (max-width: 50em) {
+  .cta {
+    background-image: url(/images/bg-simplify-section-mobile.svg);
+    background-position: left;
+  }
+}
+
 /* Utility Classes */
 
 .visually-hidden {
@@ -276,6 +291,10 @@ p[data-width="wide"] {
   gap: 1rem;
 }
 
+.justify-self-end {
+  justify-self: center;
+}
+
 @media (min-width: 50em) {
   .even-columns {
     grid-auto-flow: column;
@@ -285,14 +304,14 @@ p[data-width="wide"] {
   .display-md-inline-flex {
     display: inline-flex;
   }
+
+  .justify-self-end {
+    justify-self: end;
+  }
 }
 
 .vertical-align-center {
   align-items: center;
-}
-
-.justify-self-end {
-  justify-self: end;
 }
 
 :where(.flow > :not(:first-child)) {
